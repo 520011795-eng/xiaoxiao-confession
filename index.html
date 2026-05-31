@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="一封写给笑笑的表白信。"
+    />
+    <meta property="og:title" content="笑笑，想把这句话认真说给你听" />
+    <meta
+      property="og:description"
+      content="从遇见笑笑的那天起，生活里很多普通瞬间都有了回声。"
+    />
+    <meta property="og:image" content="./assets/hero.png" />
+    <title>笑笑，想把这句话认真说给你听</title>
+    <link rel="preload" href="./assets/hero.png" as="image" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero" aria-label="表白信首页">
+        <img class="hero__image" src="./assets/hero.png" alt="" />
+        <div class="hero__shade"></div>
+
+        <div class="hero__content">
+          <p class="eyebrow" id="dateLine">2026.05.31</p>
+          <h1>
+            笑笑，我想把这句话
+            <span>认真说给你听</span>
+          </h1>
+          <p class="lead">
+            遇见笑笑以后，我开始期待每一次消息亮起、每一段一起走过的路，
+            也开始悄悄把未来想象成有你的样子。
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#letter">打开这封信</a>
+            <button class="button button--ghost" id="shareButton" type="button">
+              分享给 TA
+            </button>
+          </div>
+        </div>
+
+        <a class="scroll-hint" href="#letter" aria-label="继续阅读">
+          <span></span>
+        </a>
+      </section>
+
+      <section class="letter" id="letter" aria-label="表白信内容">
+        <div class="letter__inner">
+          <p class="section-kicker">To the one I like</p>
+          <h2 id="recipientName">笑笑：</h2>
+          <div class="letter__body" id="letterBody"></div>
+
+          <div class="promise">
+            <p>我不是一时兴起。</p>
+            <p>
+              我想陪你吃很多顿饭，看很多次日落，也想在平凡的日子里，
+              把喜欢变成认真、稳定、可抵达的陪伴。
+            </p>
+          </div>
+
+          <div class="answer" aria-label="回应按钮">
+            <button class="choice choice--yes" id="yesButton" type="button">
+              我愿意
+            </button>
+            <button class="choice choice--soft" id="softButton" type="button">
+              再给我一点时间
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="memories" aria-label="心动瞬间">
+        <div class="memory">
+          <span>01</span>
+          <p>喜欢你认真说话时的样子。</p>
+        </div>
+        <div class="memory">
+          <span>02</span>
+          <p>喜欢你把小事也过得很可爱的能力。</p>
+        </div>
+        <div class="memory">
+          <span>03</span>
+          <p>也喜欢那个因为你而变得更勇敢的我。</p>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="modal" id="replyModal">
+      <div class="modal__content">
+        <p class="modal__kicker" id="modalKicker">我听见啦</p>
+        <h2 id="modalTitle">那从今天开始，我们一起往前走。</h2>
+        <p id="modalText">
+          这句话我会记很久，也会用以后的每一天好好证明。
+        </p>
+        <button class="button button--primary" id="closeModal" type="button">
+          收好这份心意
+        </button>
+      </div>
+    </dialog>
+
+    <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+    <script src="./script.js"></script>
+  </body>
+</html>
