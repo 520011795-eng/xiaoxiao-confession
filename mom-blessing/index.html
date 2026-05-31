@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="愿妈妈健康、平安、幸福，每一天都被温柔以待。" />
+    <meta property="og:title" content="妈妈，愿您健康幸福" />
+    <meta property="og:description" content="把最朴素也最珍贵的祝福，认真送给妈妈。" />
+    <meta property="og:image" content="./assets/hero.png" />
+    <title>妈妈，愿您健康幸福</title>
+    <link rel="preload" href="./assets/hero.png" as="image" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="hero" aria-label="给妈妈的祝福">
+        <img class="hero__image" src="./assets/hero.png" alt="" />
+        <div class="hero__shade"></div>
+        <div class="hero__content">
+          <p class="eyebrow">For Mom</p>
+          <h1>
+            妈妈，愿您
+            <span>健康幸福</span>
+          </h1>
+          <p class="lead">
+            愿清晨有好心情，三餐有好胃口，身边有牵挂也有欢笑。
+            愿往后的每一天，都平安、自在、被爱包围。
+          </p>
+          <div class="actions">
+            <a class="button button--primary" href="#letter">收下这份祝福</a>
+            <button class="button button--ghost" id="shareButton" type="button">
+              分享给妈妈
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="letter" id="letter" aria-label="祝福信">
+        <div class="letter__inner">
+          <p class="section-kicker">一封小小的信</p>
+          <h2>亲爱的妈妈：</h2>
+          <div class="letter__body" id="letterBody"></div>
+
+          <div class="wish-panel">
+            <p>愿您身体轻松，心里敞亮。</p>
+            <p>愿日子慢一点，笑容多一点，烦恼少一点。</p>
+          </div>
+
+          <button class="wish-button" id="wishButton" type="button">
+            点亮祝福
+          </button>
+        </div>
+      </section>
+
+      <section class="wishes" aria-label="祝福清单">
+        <article>
+          <span>01</span>
+          <h3>愿您健康</h3>
+          <p>每一次休息都踏实，每一次出门都顺遂。</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>愿您平安</h3>
+          <p>岁月温柔，家人常伴，心里总有安稳的光。</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>愿您幸福</h3>
+          <p>喜欢的事都有人支持，想见的人都在身边。</p>
+        </article>
+      </section>
+    </main>
+
+    <dialog class="modal" id="wishModal">
+      <div class="modal__content">
+        <p class="modal__kicker">祝福已点亮</p>
+        <h2>妈妈，愿您一年四季都健康幸福。</h2>
+        <p>
+          这不是一句客套话，是我每天都真心希望发生的事。
+        </p>
+        <button class="button button--primary" id="closeModal" type="button">
+          收下啦
+        </button>
+      </div>
+    </dialog>
+
+    <canvas id="petalCanvas" aria-hidden="true"></canvas>
+    <script src="./script.js"></script>
+  </body>
+</html>
