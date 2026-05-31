@@ -1,7 +1,7 @@
 const blessing = {
   date: "2026.05.31",
   paragraphs: [
-    "妈妈，很多感谢平时说不出口，但每一次想起您的辛苦和牵挂，心里都觉得很暖。",
+    "小李妈妈，很多感谢平时说不出口，但每一次想起您的辛苦和牵挂，心里都觉得很暖。",
     "愿您每天都睡得安稳、吃得开心，遇到的事情都顺顺利利，心情像窗边的阳光一样明亮。",
     "我们会慢慢长大，也会更认真地陪伴您。愿您把更多时间留给自己，去做喜欢的事，过舒心的日子。"
   ]
@@ -90,7 +90,7 @@ function animatePetals() {
 async function sharePage() {
   const shareData = {
     title: document.title,
-    text: "妈妈，愿您健康、平安、幸福。",
+    text: "小李妈妈，愿您健康、平安、幸福。",
     url: window.location.href
   };
 
@@ -102,7 +102,7 @@ async function sharePage() {
   await navigator.clipboard.writeText(window.location.href);
   shareButton.textContent = "链接已复制";
   window.setTimeout(() => {
-    shareButton.textContent = "分享给妈妈";
+  shareButton.textContent = "分享给小李妈妈";
   }, 1800);
 }
 
@@ -119,7 +119,7 @@ shareButton.addEventListener("click", () => {
   sharePage().catch(() => {
     shareButton.textContent = "复制失败";
     window.setTimeout(() => {
-      shareButton.textContent = "分享给妈妈";
+      shareButton.textContent = "分享给小李妈妈";
     }, 1800);
   });
 });
